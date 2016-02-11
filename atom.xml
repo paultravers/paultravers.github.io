@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://paultravers.github.io/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-02-11T14:58:19-05:00</updated>
+  <updated>2016-02-11T14:58:57-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -18,9 +18,7 @@
     <link href="http://paultravers.github.io/blog/2016/02/11/setting-up-octopress/"/>
     <updated>2016-02-11T14:38:47-05:00</updated>
     <id>http://paultravers.github.io/blog/2016/02/11/setting-up-octopress</id>
-    <content type="html"><![CDATA[<h1>Setting Up Octopress</h1>
-
-<h4>OS: Mac OSX 10.10.3 with Developer Tools installed</h4>
+    <content type="html"><![CDATA[<h4>OS: Mac OSX 10.10.3 with Developer Tools installed</h4>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
