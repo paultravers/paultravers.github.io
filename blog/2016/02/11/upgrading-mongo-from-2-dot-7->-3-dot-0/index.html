@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Paul's Personal Blog</title>
+  <title>Upgrading Mongo From 2.7 -> 3.0 - Paul's Personal Blog</title>
   <meta name="author" content="Paul Travers">
 
   
-  <meta name="description" content="Blog Archive 2016 Upgrading Mongo From 2.7 -> 3.0
-Feb 11 2016 posted in documentation, homelab, raid, work Slow Cooker Buffalo Shredded Chicken
-Feb &hellip;">
+  <meta name="description" content="disable balancer in mongo shell 1
+sh.stopBalancer() upgrade 1 mongos to upgrade the cluster metadata 1
+mongos --configdb &lt;configDB string&gt; -- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ Feb &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://paultravers.github.io/blog/archives/">
+  <link rel="canonical" href="http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Paul's Personal Blog" type="application/atom+xml">
@@ -67,91 +67,101 @@ Feb &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Upgrading Mongo From 2.7 -> 3.0</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-02-11T15:54:16-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>3:54 pm</span></time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
-
-  
-  <h2>2016</h2>
-
-<article>
-  
-<h1><a href="/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/">Upgrading Mongo From 2.7 -> 3.0</a></h1>
-<time datetime="2016-02-11T15:54:16-05:00" pubdate><span class='month'>Feb</span> <span class='day'>11</span> <span class='year'>2016</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/documentation/'>documentation</a>, <a class='category' href='/blog/categories/homelab/'>homelab</a>, <a class='category' href='/blog/categories/raid/'>raid</a>, <a class='category' href='/blog/categories/work/'>work</a></span>
-</footer>
+<div class="entry-content"><ul>
+<li>disable balancer in mongo shell</li>
+</ul>
 
 
-</article>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sh.stopBalancer<span class="o">()</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-
-<article>
-  
-<h1><a href="/blog/2016/02/11/slow-cooker-buffalo-shredded-chicken/">Slow Cooker Buffalo Shredded Chicken</a></h1>
-<time datetime="2016-02-11T15:51:09-05:00" pubdate><span class='month'>Feb</span> <span class='day'>11</span> <span class='year'>2016</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/keto/'>keto</a>, <a class='category' href='/blog/categories/recipes/'>recipes</a></span>
-</footer>
+<ul>
+<li>upgrade 1 mongos to upgrade the cluster metadata</li>
+</ul>
 
 
-</article>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mongos --configdb &lt;configDB string&gt; --upgrade
+</span></code></pre></td></tr></table></div></figure>
 
 
-
-<article>
-  
-<h1><a href="/blog/2016/02/11/determining-which-switchport-youre-connected-to/">Determining Which Switchport You're Connected To</a></h1>
-<time datetime="2016-02-11T15:44:50-05:00" pubdate><span class='month'>Feb</span> <span class='day'>11</span> <span class='year'>2016</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/documentation/'>documentation</a>, <a class='category' href='/blog/categories/homelab/'>homelab</a>, <a class='category' href='/blog/categories/raid/'>raid</a>, <a class='category' href='/blog/categories/work/'>work</a></span>
-</footer>
+<ul>
+<li><p>upgrade the rest of mongos</p></li>
+<li><p>upgrade the config servers starting with the last in the config string</p></li>
+<li><p>Upgrade each shard</p></li>
+<li><p>re-enable balancer in mongo shell</p></li>
+</ul>
 
 
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2016/02/11/common-megacli-commands/">Common MegaCLI Commands</a></h1>
-<time datetime="2016-02-11T15:36:09-05:00" pubdate><span class='month'>Feb</span> <span class='day'>11</span> <span class='year'>2016</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/documentation/'>documentation</a>, <a class='category' href='/blog/categories/homelab/'>homelab</a>, <a class='category' href='/blog/categories/raid/'>raid</a>, <a class='category' href='/blog/categories/work/'>work</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2016/02/11/setting-up-octopress/">Setting Up Octopress</a></h1>
-<time datetime="2016-02-11T14:38:47-05:00" pubdate><span class='month'>Feb</span> <span class='day'>11</span> <span class='year'>2016</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/documentation/'>documentation</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/homelab/'>homelab</a></span>
-</footer>
-
-
-</article>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sh.startBalancer<span class="o">()</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Paul Travers</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-02-11T15:54:16-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>3:54 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/documentation/'>documentation</a>, <a class='category' href='/blog/categories/homelab/'>homelab</a>, <a class='category' href='/blog/categories/raid/'>raid</a>, <a class='category' href='/blog/categories/work/'>work</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/" data-via="" data-counturl="http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/02/11/slow-cooker-buffalo-shredded-chicken/" title="Previous Post: Slow Cooker Buffalo Shredded Chicken">&laquo; Slow Cooker Buffalo Shredded Chicken</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

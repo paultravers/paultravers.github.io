@@ -9,9 +9,9 @@
   <meta name="author" content="Paul Travers">
 
   
-  <meta name="description" content="Ingredients 6 chicken breasts
-1 (1.5 ounce) packet of Simply Organic Ranch Seasoning/Dressing Mix
-1 (12 ounce) bottle Frank&rsquo;s Hot Sauce &hellip;">
+  <meta name="description" content="disable balancer in mongo shell 1
+sh.stopBalancer() upgrade 1 mongos to upgrade the cluster metadata 1
+mongos --configdb &lt;configDB string&gt; -- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,66 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/">Upgrading Mongo From 2.7 -> 3.0</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-02-11T15:54:16-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>3:54 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li>disable balancer in mongo shell</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sh.stopBalancer<span class="o">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>upgrade 1 mongos to upgrade the cluster metadata</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mongos --configdb &lt;configDB string&gt; --upgrade
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p>upgrade the rest of mongos</p></li>
+<li><p>upgrade the config servers starting with the last in the config string</p></li>
+<li><p>Upgrade each shard</p></li>
+<li><p>re-enable balancer in mongo shell</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sh.startBalancer<span class="o">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -307,6 +367,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/">Upgrading Mongo From 2.7 -> 3.0</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/02/11/slow-cooker-buffalo-shredded-chicken/">Slow Cooker Buffalo Shredded Chicken</a>

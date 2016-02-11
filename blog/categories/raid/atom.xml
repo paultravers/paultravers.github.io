@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Raid | Paul's Personal Blog]]></title>
   <link href="http://paultravers.github.io/blog/categories/raid/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-02-11T15:53:04-05:00</updated>
+  <updated>2016-02-11T15:56:20-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
     <name><![CDATA[Paul Travers]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upgrading Mongo From 2.7 -> 3.0]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/"/>
+    <updated>2016-02-11T15:54:16-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-2-dot-7->-3-dot-0</id>
+    <content type="html"><![CDATA[<ul>
+<li>disable balancer in mongo shell</li>
+</ul>
+
+
+<pre><code class="bash">sh.stopBalancer()
+</code></pre>
+
+<ul>
+<li>upgrade 1 mongos to upgrade the cluster metadata
+<code>bash
+mongos --configdb &lt;configDB string&gt; --upgrade
+</code></li>
+<li><p>upgrade the rest of mongos</p></li>
+<li><p>upgrade the config servers starting with the last in the config string</p></li>
+<li><p>Upgrade each shard</p></li>
+<li><p>re-enable balancer in mongo shell
+<code>bash
+sh.startBalancer()
+</code></p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Determining Which Switchport You're Connected To]]></title>
