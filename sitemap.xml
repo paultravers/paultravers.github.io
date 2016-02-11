@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://paultravers.github.io/blog/2016/02/11/determining-which-switchport-youre-connected-to/</loc>
+<lastmod>2016-02-11T15:44:50-05:00</lastmod>
+</url>
+<url>
 <loc>http://paultravers.github.io/blog/2016/02/11/common-megacli-commands/</loc>
 <lastmod>2016-02-11T15:36:09-05:00</lastmod>
 </url>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Paul's Personal Blog</title>
+  <title>Determining Which Switchport You're Connected To - Paul's Personal Blog</title>
   <meta name="author" content="Paul Travers">
 
   
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://paultravers.github.io/">
+  <link rel="canonical" href="http://paultravers.github.io/blog/2016/02/11/determining-which-switchport-youre-connected-to/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Paul's Personal Blog" type="application/atom+xml">
@@ -70,15 +70,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2016/02/11/determining-which-switchport-youre-connected-to/">Determining Which Switchport You're Connected To</a></h1>
+      <h1 class="entry-title">Determining Which Switchport You're Connected To</h1>
     
     
       <p class="meta">
@@ -94,7 +91,7 @@
   </header>
 
 
-  <div class="entry-content"><h3>CDP</h3>
+<div class="entry-content"><h3>CDP</h3>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -126,140 +123,46 @@
 
 <p><a href="https://dazdaztech.wordpress.com/2013/05/17/using-tcpdump-to-see-cdp-or-lldp-packets/">Info taken from</a></p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/02/11/common-megacli-commands/">Common MegaCLI Commands</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-02-11T15:36:09-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>3:36 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ubuntu: megacli</p>
-
-<p>Centos: /opt/MegaRAID/MegaCli/MegaCli64</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># Get all adapter information</span>
-</span><span class='line'>megacli -AdpAllInfo -aALL
-</span><span class='line'>
-</span><span class='line'><span class="c">#Get all physical drives:</span>
-</span><span class='line'>megacli -PDList -aALL
-</span><span class='line'><span class="c"># useful filter for above command:</span>
-</span><span class='line'>megacli -PDList -aALL <span class="p">|</span> egrep -i <span class="s1">&#39;(size|enclosure|slot|media)&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># Configure a new raid 0 with 1 drive using the default enclosure and the third drive</span>
-</span><span class='line'>megacli -CfgLdAdd -r0 32:2 -a0
-</span><span class='line'>
-</span><span class='line'><span class="c"># Configure a raid10 array with the third and fourth drives in one raid1 and the fifth and sixth drives in another raid1</span>
-</span><span class='line'>megacli -CfgSpanAdd -r10 -Array0<span class="o">[</span>32:2,32:3<span class="o">]</span> -Array1<span class="o">[</span>32:4,32:5<span class="o">]</span> -a0
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="https://supportforums.cisco.com/document/62901/megacli-common-commands-and-procedures">Reference1</a></p>
-</div>
-  
   
 
+<span class="byline author vcard">Posted by <span class="fn">Paul Travers</span></span>
 
-    </article>
-  
-  
-    <article>
       
-  <header>
+
+
+
+
+<time class='entry-date' datetime='2016-02-11T15:44:50-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>3:44 pm</span></time>
+      
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2016/02/11/setting-up-octopress/">Setting Up Octopress</a></h1>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://paultravers.github.io/blog/2016/02/11/determining-which-switchport-youre-connected-to/" data-via="" data-counturl="http://paultravers.github.io/blog/2016/02/11/determining-which-switchport-youre-connected-to/" >Tweet</a>
+  
+  
+  
+</div>
+
     
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-02-11T14:38:47-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>2:38 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h4>OS: Mac OSX 10.10.3 with Developer Tools installed</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo gem install bundler
-</span><span class='line'><span class="nb">cd</span> ~/git
-</span><span class='line'>git clone git://github.com/imathis/octopress.git octopress
-</span><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>bundle install
-</span><span class='line'>rake install
-</span><span class='line'>
-</span><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;Setting Up octopress&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="c">#&lt;&gt;edit the new source _post file here&gt;</span>
-</span><span class='line'>rake generate
-</span><span class='line'>rake deploy
-</span><span class='line'><span class="c"># ???</span>
-</span><span class='line'><span class="c"># Profit!</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/02/11/common-megacli-commands/" title="Previous Post: Common MegaCLI Commands">&laquo; Common MegaCLI Commands</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -287,6 +190,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
