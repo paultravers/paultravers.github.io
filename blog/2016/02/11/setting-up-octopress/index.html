@@ -9,9 +9,22 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="To be updated later to make pretty: OS: Mac OSX 10.10.3 with Developer Tools installed sudo gem install bundler
+  <meta name="description" content="Setting Up Octopress OS: Mac OSX 10.10.3 with Developer Tools installed 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+sudo gem install bundler
 cd ~/git
-git clone git://github.com/ &hellip;">
+git clone git &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,27 +99,40 @@ git clone git://github.com/ &hellip;">
   </header>
 
 
-<div class="entry-content"><ul>
-<li>To be updated later to make pretty:</li>
-</ul>
+<div class="entry-content"><h1>Setting Up Octopress</h1>
+
+<h4>OS: Mac OSX 10.10.3 with Developer Tools installed</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo gem install bundler
+</span><span class='line'><span class="nb">cd</span> ~/git
+</span><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'><span class="nb">cd </span>octopress
+</span><span class='line'>bundle install
+</span><span class='line'>rake install
+</span><span class='line'>
+</span><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;Setting Up octopress&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="c">#&lt;&gt;edit the new source _post file here&gt;</span>
+</span><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span><span class='line'><span class="c"># ???</span>
+</span><span class='line'><span class="c"># Profit!</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p>OS: Mac OSX 10.10.3 with Developer Tools installed</p>
 
-<p>sudo gem install bundler
-cd ~/git
-git clone git://github.com/imathis/octopress.git octopress
-cd octopress
-bundle install
-rake install</p>
-
-<p>rake new_post[&ldquo;Setting Up octopress&rdquo;]</p>
-
-<p><em>Stuff</em></p>
-
-<p>rake generate
-rake deploy
-???</p>
 </div>
 
 
