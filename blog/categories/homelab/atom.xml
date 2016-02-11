@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://paultravers.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Homelab | My Octopress Blog]]></title>
+  <link href="http://paultravers.github.io/blog/categories/homelab/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
   <updated>2016-02-11T14:49:20-05:00</updated>
   <id>http://paultravers.github.io/</id>

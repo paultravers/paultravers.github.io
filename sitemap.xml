@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://paultravers.github.io/blog/2016/02/11/setting-up-octopress/</loc>
+<lastmod>2016-02-11T14:38:47-05:00</lastmod>
+</url>
+<url>
 <loc>http://paultravers.github.io/blog/archives/</loc>
 </url>
 <url>
 <loc>http://paultravers.github.io/</loc>
+</url>
+<url>
+<loc>http://paultravers.github.io/blog/categories/homelab/</loc>
+</url>
+<url>
+<loc>http://paultravers.github.io/blog/categories/documentation/</loc>
+</url>
+<url>
+<loc>http://paultravers.github.io/blog/categories/github/</loc>
 </url>
 </urlset>
