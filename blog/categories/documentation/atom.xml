@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Documentation | My Octopress Blog]]></title>
+  <title><![CDATA[Category: Documentation | Paul's Personal Blog]]></title>
   <link href="http://paultravers.github.io/blog/categories/documentation/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-02-11T14:58:57-05:00</updated>
+  <updated>2016-02-11T15:03:23-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Paul Travers]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
