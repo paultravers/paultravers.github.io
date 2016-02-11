@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Recipes | Paul's Personal Blog]]></title>
+  <link href="http://paultravers.github.io/blog/categories/recipes/atom.xml" rel="self"/>
+  <link href="http://paultravers.github.io/"/>
+  <updated>2016-02-11T15:53:04-05:00</updated>
+  <id>http://paultravers.github.io/</id>
+  <author>
+    <name><![CDATA[Paul Travers]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Slow Cooker Buffalo Shredded Chicken]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/slow-cooker-buffalo-shredded-chicken/"/>
+    <updated>2016-02-11T15:51:09-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/slow-cooker-buffalo-shredded-chicken</id>
+    <content type="html"><![CDATA[<h3>Ingredients</h3>
+
+<ul>
+<li>6 chicken breasts</li>
+<li>1 (1.5 ounce) packet of Simply Organic Ranch Seasoning/Dressing Mix</li>
+<li>1 (12 ounce) bottle Frank&rsquo;s Hot Sauce</li>
+</ul>
+
+
+<h3>Instructions</h3>
+
+<ul>
+<li><p>Place chicken breasts in slow cooker. Sprinkle ranch seasoning over chicken then pour in hot sauce. Turn chicken a few times until it is coated and liquids and seasoning are mixed together.</p></li>
+<li><p>Cook on low for 5-6 hours. Take chicken out and shred.</p></li>
+</ul>
+
+
+<p><a href="http://www.organizeyourselfskinny.com/2014/04/26/slow-cooker-buffalo-shredded-chicken/">Reference</a></p>
+]]></content>
+  </entry>
+  
+</feed>
