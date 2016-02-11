@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Homelab | Paul's Personal Blog]]></title>
   <link href="http://paultravers.github.io/blog/categories/homelab/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-02-11T15:56:20-05:00</updated>
+  <updated>2016-02-11T16:16:19-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
     <name><![CDATA[Paul Travers]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upgrading Mongo From 3.x -> 3.2.1]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-3-dot-x-%3E-3-dot-2-1/"/>
+    <updated>2016-02-11T16:08:10-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-3-dot-x->-3-dot-2-1</id>
+    <content type="html"><![CDATA[<h1>Important note for sharded clusters!</h1>
+
+<p>3.2.1 has a bug in it for mongoc config metadata, if you upgrade there is a chance that you will run into this and need to downgrade your mongos client until there is a fix:
+<a href="https://jira.mongodb.org/browse/SERVER-22247">BUG-SERVER-22247</a></p>
+
+<h1>Steps to upgrade:</h1>
+
+<ul>
+<li>Upgrade each shard (mongod)</li>
+<li>upgrade the config servers starting with the last in the config string</li>
+<li>upgrade all mongos instances</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Upgrading Mongo From 2.7 -> 3.0]]></title>

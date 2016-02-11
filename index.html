@@ -9,9 +9,7 @@
   <meta name="author" content="Paul Travers">
 
   
-  <meta name="description" content="disable balancer in mongo shell 1
-sh.stopBalancer() upgrade 1 mongos to upgrade the cluster metadata 1
-mongos --configdb &lt;configDB string&gt; -- &hellip;">
+  <meta name="description" content="Important note for sharded clusters! 3.2.1 has a bug in it for mongoc config metadata, if you upgrade there is a chance that you will run into this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +66,47 @@ mongos --configdb &lt;configDB string&gt; -- &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/02/11/upgrading-mongo-from-3-dot-x-%3E-3-dot-2-1/">Upgrading Mongo From 3.x -> 3.2.1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-02-11T16:08:10-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>4:08 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>Important note for sharded clusters!</h1>
+
+<p>3.2.1 has a bug in it for mongoc config metadata, if you upgrade there is a chance that you will run into this and need to downgrade your mongos client until there is a fix:
+<a href="https://jira.mongodb.org/browse/SERVER-22247">BUG-SERVER-22247</a></p>
+
+<h1>Steps to upgrade:</h1>
+
+<ul>
+<li>Upgrade each shard (mongod)</li>
+<li>upgrade the config servers starting with the last in the config string</li>
+<li>upgrade all mongos instances</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -369,6 +408,10 @@ mongos --configdb &lt;configDB string&gt; -- &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/02/11/upgrading-mongo-from-3-dot-x-%3E-3-dot-2-1/">Upgrading Mongo From 3.x -> 3.2.1</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/">Upgrading Mongo From 2.7 -> 3.0</a>
       </li>
     
@@ -382,10 +425,6 @@ mongos --configdb &lt;configDB string&gt; -- &hellip;">
     
       <li class="post">
         <a href="/blog/2016/02/11/common-megacli-commands/">Common MegaCLI Commands</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/02/11/setting-up-octopress/">Setting Up Octopress</a>
       </li>
     
   </ul>
