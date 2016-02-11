@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Raid | Paul's Personal Blog]]></title>
   <link href="http://paultravers.github.io/blog/categories/raid/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-02-11T15:47:56-05:00</updated>
+  <updated>2016-02-11T15:49:20-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
     <name><![CDATA[Paul Travers]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Determining Which Switchport You're Connected To]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/determining-which-switchport-youre-connected-to/"/>
+    <updated>2016-02-11T15:44:50-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/determining-which-switchport-youre-connected-to</id>
+    <content type="html"><![CDATA[<h3>CDP</h3>
+
+<pre><code class="bash">## This will often show you the Cisco chassis switch, then use your firms asset management software to find the upstream switch.
+## -s 1500 capture 1500 bytes of the packet (typical MTU size)
+## ether[20:2] == 0x2000 - Capture only packets that are starting at byte 20, and have a 2 byte value of hex 2000 
+
+tcpdump -v -s 1500 -c 1 'ether[20:2] == 0x2000'
+</code></pre>
+
+<h3>LLDP</h3>
+
+<pre><code class="bash">## Switch:
+tcpdump -i eth0 -s 1500 -XX -c 1 'ether proto 0x88cc'
+
+## Port and CDP Neighbor Info:
+tcpdump -v -s 1500 -c 1 '(ether[12:2]=0x88cc or ether[20:2]=0x2000)'
+</code></pre>
+
+<p><a href="https://dazdaztech.wordpress.com/2013/05/17/using-tcpdump-to-see-cdp-or-lldp-packets/">Info taken from</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Common MegaCLI Commands]]></title>
