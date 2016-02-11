@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Documentation | Paul's Personal Blog]]></title>
   <link href="http://paultravers.github.io/blog/categories/documentation/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-02-11T15:26:41-05:00</updated>
+  <updated>2016-02-11T15:43:29-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
     <name><![CDATA[Paul Travers]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Common MegaCLI Commands]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/common-megacli-commands/"/>
+    <updated>2016-02-11T15:36:09-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/common-megacli-commands</id>
+    <content type="html"><![CDATA[<p>Ubuntu: megacli</p>
+
+<p>Centos: /opt/MegaRAID/MegaCli/MegaCli64</p>
+
+<pre><code class="bash"># Get all adapter information
+megacli -AdpAllInfo -aALL
+
+#Get all physical drives:
+megacli -PDList -aALL
+# useful filter for above command:
+megacli -PDList -aALL | egrep -i '(size|enclosure|slot|media)'
+
+# Configure a new raid 0 with 1 drive using the default enclosure and the third drive
+megacli -CfgLdAdd -r0 32:2 -a0
+
+# Configure a raid10 array with the third and fourth drives in one raid1 and the fifth and sixth drives in another raid1
+megacli -CfgSpanAdd -r10 -Array0[32:2,32:3] -Array1[32:4,32:5] -a0
+</code></pre>
+
+<p><a href="https://supportforums.cisco.com/document/62901/megacli-common-commands-and-procedures">Reference1</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting Up Octopress]]></title>

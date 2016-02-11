@@ -4,7 +4,7 @@
   <title><![CDATA[Paul's Personal Blog]]></title>
   <link href="http://paultravers.github.io/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-02-11T15:26:41-05:00</updated>
+  <updated>2016-02-11T15:43:29-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
     <name><![CDATA[Paul Travers]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Common MegaCLI Commands]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/common-megacli-commands/"/>
+    <updated>2016-02-11T15:36:09-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/common-megacli-commands</id>
+    <content type="html"><![CDATA[<p>Ubuntu: megacli</p>
+
+<p>Centos: /opt/MegaRAID/MegaCli/MegaCli64</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># Get all adapter information</span>
+</span><span class='line'>megacli -AdpAllInfo -aALL
+</span><span class='line'>
+</span><span class='line'><span class="c">#Get all physical drives:</span>
+</span><span class='line'>megacli -PDList -aALL
+</span><span class='line'><span class="c"># useful filter for above command:</span>
+</span><span class='line'>megacli -PDList -aALL <span class="p">|</span> egrep -i <span class="s1">&#39;(size|enclosure|slot|media)&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Configure a new raid 0 with 1 drive using the default enclosure and the third drive</span>
+</span><span class='line'>megacli -CfgLdAdd -r0 32:2 -a0
+</span><span class='line'>
+</span><span class='line'><span class="c"># Configure a raid10 array with the third and fourth drives in one raid1 and the fifth and sixth drives in another raid1</span>
+</span><span class='line'>megacli -CfgSpanAdd -r10 -Array0<span class="o">[</span>32:2,32:3<span class="o">]</span> -Array1<span class="o">[</span>32:4,32:5<span class="o">]</span> -a0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://supportforums.cisco.com/document/62901/megacli-common-commands-and-procedures">Reference1</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting Up Octopress]]></title>

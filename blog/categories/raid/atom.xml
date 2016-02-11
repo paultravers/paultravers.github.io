@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Homelab | Paul's Personal Blog]]></title>
-  <link href="http://paultravers.github.io/blog/categories/homelab/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Raid | Paul's Personal Blog]]></title>
+  <link href="http://paultravers.github.io/blog/categories/raid/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
   <updated>2016-02-11T15:43:29-05:00</updated>
   <id>http://paultravers.github.io/</id>
@@ -38,30 +38,6 @@ megacli -CfgSpanAdd -r10 -Array0[32:2,32:3] -Array1[32:4,32:5] -a0
 </code></pre>
 
 <p><a href="https://supportforums.cisco.com/document/62901/megacli-common-commands-and-procedures">Reference1</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setting Up Octopress]]></title>
-    <link href="http://paultravers.github.io/blog/2016/02/11/setting-up-octopress/"/>
-    <updated>2016-02-11T14:38:47-05:00</updated>
-    <id>http://paultravers.github.io/blog/2016/02/11/setting-up-octopress</id>
-    <content type="html"><![CDATA[<h4>OS: Mac OSX 10.10.3 with Developer Tools installed</h4>
-
-<pre><code class="bash">sudo gem install bundler
-cd ~/git
-git clone git://github.com/imathis/octopress.git octopress
-cd octopress
-bundle install
-rake install
-
-rake new_post["Setting Up octopress"]
-#&lt;&gt;edit the new source _post file here&gt;
-rake generate
-rake deploy
-# ???
-# Profit!
-</code></pre>
 ]]></content>
   </entry>
   
