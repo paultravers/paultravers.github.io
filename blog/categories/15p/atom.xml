@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 15p | Paul's Personal Blog]]></title>
+  <link href="http://paultravers.github.io/blog/categories/15p/atom.xml" rel="self"/>
+  <link href="http://paultravers.github.io/"/>
+  <updated>2016-12-01T17:29:07-05:00</updated>
+  <id>http://paultravers.github.io/</id>
+  <author>
+    <name><![CDATA[Paul Travers]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vista 15p User Management]]></title>
+    <link href="http://paultravers.github.io/blog/2016/12/01/vista-15p-user-management/"/>
+    <updated>2016-12-01T17:27:09-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/12/01/vista-15p-user-management</id>
+    <content type="html"><![CDATA[<h3>User management</h3>
+
+<p>users #03-49</p>
+
+<h1>Adding user</h1>
+
+<p>master code + 8 + user_no + user_code</p>
+
+<h1>Deleting user</h1>
+
+<p>master code + 8 + user_no + # + 0</p>
+
+<h1>Set User Authority</h1>
+
+<p>master code + 8 + user_no + # + 1 + value
+0=user
+1=arm only
+2=guest
+3=duress
+4=part_master</p>
+
+<h1>Set Master code</h1>
+
+<p>master code + 8 + user_no + new master code</p>
+
+<h1>Set installer code</h1>
+
+<h2>go into programming mode first:</h2>
+
+<p>*20 + new installer code +</p>
+
+<h1>Exit installer mode</h1>
+
+<ul>
+<li>9 9</li>
+</ul>
+
+
+<h6>Programming Expert</h6>
+
+<h2>enable keypad at address 18 # ad2usb</h2>
+
+<p>*191 + 1 + 0</p>
+]]></content>
+  </entry>
+  
+</feed>

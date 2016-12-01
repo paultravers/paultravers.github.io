@@ -9,7 +9,7 @@
   <meta name="author" content="Paul Travers">
 
   
-  <meta name="description" content="Important note for sharded clusters! 3.2.1 has a bug in it for mongoc config metadata, if you upgrade there is a chance that you will run into this &hellip;">
+  <meta name="description" content="User management users #03-49 Adding user master code + 8 + user_no + user_code Deleting user master code + 8 + user_no + # + 0 Set User Authority &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,77 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/12/01/vista-15p-user-management/">Vista 15p User Management</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-12-01T17:27:09-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>1</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>5:27 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>User management</h3>
+
+<p>users #03-49</p>
+
+<h1>Adding user</h1>
+
+<p>master code + 8 + user_no + user_code</p>
+
+<h1>Deleting user</h1>
+
+<p>master code + 8 + user_no + # + 0</p>
+
+<h1>Set User Authority</h1>
+
+<p>master code + 8 + user_no + # + 1 + value
+0=user
+1=arm only
+2=guest
+3=duress
+4=part_master</p>
+
+<h1>Set Master code</h1>
+
+<p>master code + 8 + user_no + new master code</p>
+
+<h1>Set installer code</h1>
+
+<h2>go into programming mode first:</h2>
+
+<p>*20 + new installer code +</p>
+
+<h1>Exit installer mode</h1>
+
+<ul>
+<li>9 9</li>
+</ul>
+
+
+<h6>Programming Expert</h6>
+
+<h2>enable keypad at address 18 # ad2usb</h2>
+
+<p>*191 + 1 + 0</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -408,6 +479,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/12/01/vista-15p-user-management/">Vista 15p User Management</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/02/11/upgrading-mongo-from-3-dot-x-%3E-3-dot-2-1/">Upgrading Mongo From 3.x -> 3.2.1</a>
       </li>
     
@@ -421,10 +496,6 @@
     
       <li class="post">
         <a href="/blog/2016/02/11/determining-which-switchport-youre-connected-to/">Determining Which Switchport You're Connected To</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/02/11/common-megacli-commands/">Common MegaCLI Commands</a>
       </li>
     
   </ul>
