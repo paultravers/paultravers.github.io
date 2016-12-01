@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vista 15p | Paul's Personal Blog]]></title>
   <link href="http://paultravers.github.io/blog/categories/vista-15p/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-12-01T17:29:07-05:00</updated>
+  <updated>2016-12-01T17:30:50-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
     <name><![CDATA[Paul Travers]]></name>
@@ -51,16 +51,15 @@
 
 <h1>Exit installer mode</h1>
 
-<ul>
-<li>9 9</li>
-</ul>
-
+<pre><code>* 9 9
+</code></pre>
 
 <h6>Programming Expert</h6>
 
 <h2>enable keypad at address 18 # ad2usb</h2>
 
-<p>*191 + 1 + 0</p>
+<pre><code>*191 + 1 + 0 
+</code></pre>
 ]]></content>
   </entry>
   

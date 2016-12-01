@@ -4,7 +4,7 @@
   <title><![CDATA[Paul's Personal Blog]]></title>
   <link href="http://paultravers.github.io/atom.xml" rel="self"/>
   <link href="http://paultravers.github.io/"/>
-  <updated>2016-12-01T17:29:07-05:00</updated>
+  <updated>2016-12-01T17:30:50-05:00</updated>
   <id>http://paultravers.github.io/</id>
   <author>
     <name><![CDATA[Paul Travers]]></name>
@@ -51,16 +51,17 @@
 
 <h1>Exit installer mode</h1>
 
-<ul>
-<li>9 9</li>
-</ul>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>* 9 9</span></code></pre></td></tr></table></div></figure>
 
 
 <h6>Programming Expert</h6>
 
 <h2>enable keypad at address 18 # ad2usb</h2>
 
-<p>*191 + 1 + 0</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*191 + 1 + 0 </span></code></pre></td></tr></table></div></figure>
+
 ]]></content>
   </entry>
   
