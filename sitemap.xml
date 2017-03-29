@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://paultravers.github.io/blog/2017/03/29/veggie-stir-fry/</loc>
+<lastmod>2017-03-29T13:48:24-04:00</lastmod>
+</url>
+<url>
 <loc>http://paultravers.github.io/blog/2017/01/11/windows-7-update-stuck/</loc>
 <lastmod>2017-01-11T09:36:07-05:00</lastmod>
 </url>
@@ -94,5 +98,20 @@
 </url>
 <url>
 <loc>http://paultravers.github.io/blog/categories/x64/</loc>
+</url>
+<url>
+<loc>http://paultravers.github.io/blog/categories/recipe/</loc>
+</url>
+<url>
+<loc>http://paultravers.github.io/blog/categories/stir-fry/</loc>
+</url>
+<url>
+<loc>http://paultravers.github.io/blog/categories/stir/</loc>
+</url>
+<url>
+<loc>http://paultravers.github.io/blog/categories/fry/</loc>
+</url>
+<url>
+<loc>http://paultravers.github.io/blog/categories/veggie/</loc>
 </url>
 </urlset>
