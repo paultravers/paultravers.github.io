@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Documentation | Paul's Personal Blog]]></title>
+  <link href="http://paultravers.github.io/blog/categories/documentation/atom.xml" rel="self"/>
+  <link href="http://paultravers.github.io/"/>
+  <updated>2017-03-29T13:49:47-04:00</updated>
+  <id>http://paultravers.github.io/</id>
+  <author>
+    <name><![CDATA[Paul Travers]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Upgrading Mongo From 3.x -> 3.2.1]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-3-dot-x-%3E-3-dot-2-1/"/>
+    <updated>2016-02-11T16:08:10-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-3-dot-x->-3-dot-2-1</id>
+    <content type="html"><![CDATA[<h1>Important note for sharded clusters!</h1>
+
+<p>3.2.1 has a bug in it for mongoc config metadata, if you upgrade there is a chance that you will run into this and need to downgrade your mongos client until there is a fix:
+<a href="https://jira.mongodb.org/browse/SERVER-22247">BUG-SERVER-22247</a></p>
+
+<h1>Steps to upgrade:</h1>
+
+<ul>
+<li>Upgrade each shard (mongod)</li>
+<li>upgrade the config servers starting with the last in the config string</li>
+<li>upgrade all mongos instances</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Upgrading Mongo From 2.7 -> 3.0]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-2-dot-7-%3E-3-dot-0/"/>
+    <updated>2016-02-11T15:54:16-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/upgrading-mongo-from-2-dot-7->-3-dot-0</id>
+    <content type="html"><![CDATA[<ul>
+<li>disable balancer in mongo shell</li>
+</ul>
+
+
+<pre><code class="bash">sh.stopBalancer()
+</code></pre>
+
+<ul>
+<li>upgrade 1 mongos to upgrade the cluster metadata
+<code>bash
+mongos --configdb &lt;configDB string&gt; --upgrade
+</code></li>
+<li><p>upgrade the rest of mongos</p></li>
+<li><p>upgrade the config servers starting with the last in the config string</p></li>
+<li><p>Upgrade each shard</p></li>
+<li><p>re-enable balancer in mongo shell
+<code>bash
+sh.startBalancer()
+</code></p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Determining Which Switchport You're Connected To]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/determining-which-switchport-youre-connected-to/"/>
+    <updated>2016-02-11T15:44:50-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/determining-which-switchport-youre-connected-to</id>
+    <content type="html"><![CDATA[<h3>CDP</h3>
+
+<pre><code class="bash">## This will often show you the Cisco chassis switch, then use your firms asset management software to find the upstream switch.
+## -s 1500 capture 1500 bytes of the packet (typical MTU size)
+## ether[20:2] == 0x2000 - Capture only packets that are starting at byte 20, and have a 2 byte value of hex 2000 
+
+tcpdump -v -s 1500 -c 1 'ether[20:2] == 0x2000'
+</code></pre>
+
+<h3>LLDP</h3>
+
+<pre><code class="bash">## Switch:
+tcpdump -i eth0 -s 1500 -XX -c 1 'ether proto 0x88cc'
+
+## Port and CDP Neighbor Info:
+tcpdump -v -s 1500 -c 1 '(ether[12:2]=0x88cc or ether[20:2]=0x2000)'
+</code></pre>
+
+<p><a href="https://dazdaztech.wordpress.com/2013/05/17/using-tcpdump-to-see-cdp-or-lldp-packets/">Info taken from</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Common MegaCLI Commands]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/common-megacli-commands/"/>
+    <updated>2016-02-11T15:36:09-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/common-megacli-commands</id>
+    <content type="html"><![CDATA[<p>Ubuntu: megacli</p>
+
+<p>Centos: /opt/MegaRAID/MegaCli/MegaCli64</p>
+
+<pre><code class="bash"># Get all adapter information
+megacli -AdpAllInfo -aALL
+
+#Get all physical drives:
+megacli -PDList -aALL
+# useful filter for above command:
+megacli -PDList -aALL | egrep -i '(size|enclosure|slot|media)'
+
+# Configure a new raid 0 with 1 drive using the default enclosure and the third drive
+megacli -CfgLdAdd -r0 32:2 -a0
+
+# Configure a raid10 array with the third and fourth drives in one raid1 and the fifth and sixth drives in another raid1
+megacli -CfgSpanAdd -r10 -Array0[32:2,32:3] -Array1[32:4,32:5] -a0
+</code></pre>
+
+<p><a href="https://supportforums.cisco.com/document/62901/megacli-common-commands-and-procedures">Reference1</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up Octopress]]></title>
+    <link href="http://paultravers.github.io/blog/2016/02/11/setting-up-octopress/"/>
+    <updated>2016-02-11T14:38:47-05:00</updated>
+    <id>http://paultravers.github.io/blog/2016/02/11/setting-up-octopress</id>
+    <content type="html"><![CDATA[<h4>OS: Mac OSX 10.10.3 with Developer Tools installed</h4>
+
+<pre><code class="bash">sudo gem install bundler
+cd ~/git
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+bundle install
+rake install
+
+rake new_post["Setting Up octopress"]
+#&lt;&gt;edit the new source _post file here&gt;
+rake generate
+rake deploy
+# ???
+# Profit!
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,64 @@
+---
+layout: post
+title: "Vista 15p User Management"
+date: 2016-12-01T17:27:09-05:00
+comments: true
+categories:
+ - 15p
+ - security
+ - vista
+ - vista 15p
+---
+
+<div class='post'>
+<h3>User management</h3>
+
+<p>users #03-49</p>
+
+<h1>Adding user</h1>
+
+<p>master code + 8 + user_no + user_code</p>
+
+<h1>Deleting user</h1>
+
+<p>master code + 8 + user_no + # + 0</p>
+
+<h1>Set User Authority</h1>
+
+<p>master code + 8 + user_no + # + 1 + value
+0=user
+1=arm only
+2=guest
+3=duress
+4=part_master</p>
+
+<h1>Set Master code</h1>
+
+<p>master code + 8 + user_no + new master code</p>
+
+<h1>Set installer code</h1>
+
+<h2>go into programming mode first:</h2>
+
+<p>*20 + new installer code +</p>
+
+<h1>Exit installer mode</h1>
+
+<figure class="code"><div class="highlight"><table><tr>
+<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+<td class="code"><pre><code class=""><span class="line">* 9 9</span></code></pre></td>
+</tr></table></div></figure>
+
+
+<h6>Programming Expert</h6>
+
+<h2>enable keypad at address 18 # ad2usb</h2>
+
+<figure class="code"><div class="highlight"><table><tr>
+<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+<td class="code"><pre><code class=""><span class="line">*191 + 1 + 0 </span></code></pre></td>
+</tr></table></div></figure>
+
+</div>

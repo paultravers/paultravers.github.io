@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Setting Up Octopress"
+date: 2016-02-11T14:38:47-05:00
+comments: true
+categories:
+ - documentation
+ - github
+ - homelab
+---
+
+<div class='post'>
+<h4>OS: Mac OSX 10.10.3 with Developer Tools installed</h4>
+
+<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr>
+<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+</pre></td>
+<td class="code"><pre><code class="bash"><span class="line">sudo gem install bundler
+</span><span class="line"><span class="nb">cd</span> ~/git
+</span><span class="line">git clone git://github.com/imathis/octopress.git octopress
+</span><span class="line"><span class="nb">cd </span>octopress
+</span><span class="line">bundle install
+</span><span class="line">rake install
+</span><span class="line">
+</span><span class="line">rake new_post<span class="o">[</span><span class="s2">Setting Up octopress</span><span class="o">]</span>
+</span><span class="line"><span class="c">#edit the new source _post file here</span>
+</span><span class="line">rake generate
+</span><span class="line">rake deploy
+</span><span class="line"><span class="c"># ???</span>
+</span><span class="line"><span class="c"># Profit!</span>
+</span></code></pre></td>
+</tr></table></div></figure>
+
+
+
+</div>

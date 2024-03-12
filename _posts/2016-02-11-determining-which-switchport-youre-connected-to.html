@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Determining Which Switchport You're Connected To"
+date: 2016-02-11T15:44:50-05:00
+comments: true
+categories:
+ - documentation
+ - homelab
+ - raid
+ - work
+---
+
+<div class='post'>
+<h3>CDP</h3>
+
+<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr>
+<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td>
+<td class="code"><pre><code class="bash"><span class="line"><span class="c">## This will often show you the Cisco chassis switch, then use your firms asset management software to find the upstream switch.</span>
+</span><span class="line"><span class="c">## -s 1500 capture 1500 bytes of the packet (typical MTU size)</span>
+</span><span class="line"><span class="c">## ether[20:2] == 0x2000 - Capture only packets that are starting at byte 20, and have a 2 byte value of hex 2000 </span>
+</span><span class="line">
+</span><span class="line">tcpdump -v -s <span class="m">1500</span> -c <span class="m">1</span> <span class="s1">'ether[20:2] == 0x2000'</span>
+</span></code></pre></td>
+</tr></table></div></figure>
+
+
+<h3>LLDP</h3>
+
+<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr>
+<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td>
+<td class="code"><pre><code class="bash"><span class="line"><span class="c">## Switch:</span>
+</span><span class="line">tcpdump -i eth0 -s <span class="m">1500</span> -XX -c <span class="m">1</span> <span class="s1">'ether proto 0x88cc'</span>
+</span><span class="line">
+</span><span class="line"><span class="c">## Port and CDP Neighbor Info:</span>
+</span><span class="line">tcpdump -v -s <span class="m">1500</span> -c <span class="m">1</span> <span class="s1">'(ether[12:2]=0x88cc or ether[20:2]=0x2000)'</span>
+</span></code></pre></td>
+</tr></table></div></figure>
+
+
+<p><a href="https://dazdaztech.wordpress.com/2013/05/17/using-tcpdump-to-see-cdp-or-lldp-packets/">Info taken from</a></p>
+</div>

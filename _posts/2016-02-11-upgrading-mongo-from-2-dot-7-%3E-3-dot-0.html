@@ -1,0 +1,56 @@
+---
+layout: post
+title: "Upgrading Mongo From 2.7 -> 3.0"
+date: 2016-02-11T15:54:16-05:00
+comments: true
+categories:
+ - documentation
+ - homelab
+ - mongo
+ - raid
+ - work
+---
+
+<div class='post'>
+<ul>
+<li>disable balancer in mongo shell</li>
+</ul>
+
+
+<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr>
+<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+<td class="code"><pre><code class="bash"><span class="line">sh.stopBalancer<span class="o">()</span>
+</span></code></pre></td>
+</tr></table></div></figure>
+
+
+<ul>
+<li>upgrade 1 mongos to upgrade the cluster metadata</li>
+</ul>
+
+
+<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr>
+<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+<td class="code"><pre><code class="bash"><span class="line">mongos --configdb configDB string --upgrade
+</span></code></pre></td>
+</tr></table></div></figure>
+
+
+<ul>
+<li><p>upgrade the rest of mongos</p></li>
+<li><p>upgrade the config servers starting with the last in the config string</p></li>
+<li><p>Upgrade each shard</p></li>
+<li><p>re-enable balancer in mongo shell</p></li>
+</ul>
+
+
+<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr>
+<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td>
+<td class="code"><pre><code class="bash"><span class="line">sh.startBalancer<span class="o">()</span>
+</span></code></pre></td>
+</tr></table></div></figure>
+
+</div>

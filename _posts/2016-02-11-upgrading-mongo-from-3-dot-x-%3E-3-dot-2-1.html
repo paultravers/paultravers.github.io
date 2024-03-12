@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Upgrading Mongo From 3.x -> 3.2.1"
+date: 2016-02-11T16:08:10-05:00
+comments: true
+categories:
+ - documentation
+ - homelab
+ - mongo
+ - raid
+ - work
+---
+
+<div class='post'>
+<h1>Important note for sharded clusters!</h1>
+
+<p>3.2.1 has a bug in it for mongoc config metadata, if you upgrade there is a chance that you will run into this and need to downgrade your mongos client until there is a fix:
+<a href="https://jira.mongodb.org/browse/SERVER-22247">BUG-SERVER-22247</a></p>
+
+<h1>Steps to upgrade:</h1>
+
+<ul>
+<li>Upgrade each shard (mongod)</li>
+<li>upgrade the config servers starting with the last in the config string</li>
+<li>upgrade all mongos instances</li>
+</ul>
+
+</div>

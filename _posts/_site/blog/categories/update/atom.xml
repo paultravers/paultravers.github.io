@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Update | Paul's Personal Blog]]></title>
+  <link href="http://paultravers.github.io/blog/categories/update/atom.xml" rel="self"/>
+  <link href="http://paultravers.github.io/"/>
+  <updated>2017-03-29T13:49:47-04:00</updated>
+  <id>http://paultravers.github.io/</id>
+  <author>
+    <name><![CDATA[Paul Travers]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Windows 7 Update Stuck]]></title>
+    <link href="http://paultravers.github.io/blog/2017/01/11/windows-7-update-stuck/"/>
+    <updated>2017-01-11T09:36:07-05:00</updated>
+    <id>http://paultravers.github.io/blog/2017/01/11/windows-7-update-stuck</id>
+    <content type="html"><![CDATA[<p>If Windows 7 updater is stuck and sucking up all of your memory make sure the following are installed manually:</p>
+
+<ul>
+<li>Windows Update Agent 7.6.7.7600.320</li>
+<li>KB3168965</li>
+<li>KB3020369</li>
+<li>KB3172605</li>
+</ul>
+
+
+<p>Reboot windows before and after installing each update and before running the updater again</p>
+]]></content>
+  </entry>
+  
+</feed>
