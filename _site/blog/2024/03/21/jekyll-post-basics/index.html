@@ -3,21 +3,21 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Upgrading Mongo From 3.x -&gt; 3.2.1 | Paul’s Personal Blog</title>
+<title>Jekyll Post Basics | Paul’s Personal Blog</title>
 <meta name="generator" content="Jekyll v3.9.5" />
-<meta property="og:title" content="Upgrading Mongo From 3.x -&gt; 3.2.1" />
+<meta property="og:title" content="Jekyll Post Basics" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Important note for sharded clusters!" />
-<meta property="og:description" content="Important note for sharded clusters!" />
-<link rel="canonical" href="http://0.0.0.0:4000/blog/2016/02/11/upgrading-mongo-from-3-dot-x-3E-3-dot-2-1/" />
-<meta property="og:url" content="http://0.0.0.0:4000/blog/2016/02/11/upgrading-mongo-from-3-dot-x-3E-3-dot-2-1/" />
+<meta name="description" content="Execute the following command or use the template below:" />
+<meta property="og:description" content="Execute the following command or use the template below:" />
+<link rel="canonical" href="http://0.0.0.0:4000/blog/2024/03/21/jekyll-post-basics/" />
+<meta property="og:url" content="http://0.0.0.0:4000/blog/2024/03/21/jekyll-post-basics/" />
 <meta property="og:site_name" content="Paul’s Personal Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2016-02-11T21:08:10+00:00" />
+<meta property="article:published_time" content="2024-03-21T03:27:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Upgrading Mongo From 3.x -&gt; 3.2.1" />
+<meta property="twitter:title" content="Jekyll Post Basics" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-02-11T21:08:10+00:00","datePublished":"2016-02-11T21:08:10+00:00","description":"Important note for sharded clusters!","headline":"Upgrading Mongo From 3.x -&gt; 3.2.1","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/blog/2016/02/11/upgrading-mongo-from-3-dot-x-3E-3-dot-2-1/"},"url":"http://0.0.0.0:4000/blog/2016/02/11/upgrading-mongo-from-3-dot-x-3E-3-dot-2-1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-21T03:27:00+00:00","datePublished":"2024-03-21T03:27:00+00:00","description":"Execute the following command or use the template below:","headline":"Jekyll Post Basics","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/blog/2024/03/21/jekyll-post-basics/"},"url":"http://0.0.0.0:4000/blog/2024/03/21/jekyll-post-basics/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Paul&apos;s Personal Blog" /></head>
 <body><header class="site-header" role="banner">
@@ -40,30 +40,34 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Upgrading Mongo From 3.x -&gt; 3.2.1</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Jekyll Post Basics</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2016-02-11T21:08:10+00:00" itemprop="datePublished">Feb 11, 2016
+      <time class="dt-published" datetime="2024-03-21T03:27:00+00:00" itemprop="datePublished">Mar 21, 2024
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <div class='post'>
-<h1>Important note for sharded clusters!</h1>
+    <p>Execute the following command or use the template below:</p>
 
-<p>3.2.1 has a bug in it for mongoc config metadata, if you upgrade there is a chance that you will run into this and need to downgrade your mongos client until there is a fix:
-<a href="https://jira.mongodb.org/browse/SERVER-22247">BUG-SERVER-22247</a></p>
+<p>bundle exec jekyll post “Jekyll Post Basics”</p>
 
-<h1>Steps to upgrade:</h1>
+<p>or</p>
 
-<ul>
-<li>Upgrade each shard (mongod)</li>
-<li>upgrade the config servers starting with the last in the config string</li>
-<li>upgrade all mongos instances</li>
-</ul>
+<hr />
+<p>layout: post
+title: Jekyll Post Basics
+date: 2024-03-21 03:27 +0000
+—</p>
 
-</div>
+<p>to create a file named _posts/2024-03-21-jekyll-post-basics.md</p>
 
-  </div><a class="u-url" href="/blog/2016/02/11/upgrading-mongo-from-3-dot-x-3E-3-dot-2-1/" hidden></a>
+<p>After creating the file test in your local environment using:</p>
+
+<p>bundle exec jekyll serve –host 0.0.0.0</p>
+
+<p>then when you are ready to publish add/commit/push your changes to your website</p>
+
+  </div><a class="u-url" href="/blog/2024/03/21/jekyll-post-basics/" hidden></a>
 </article>
 
       </div>

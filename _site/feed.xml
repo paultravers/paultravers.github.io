@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-03-12T06:20:08+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Paul’s Personal Blog</title><subtitle>Because sometimes I forget stuff and need to refer to documentation</subtitle><entry><title type="html">Moving from Octopress to Jekyll</title><link href="http://0.0.0.0:4000/blog/2024/03/12/moving-from-octopress-to-jekyll/" rel="alternate" type="text/html" title="Moving from Octopress to Jekyll" /><published>2024-03-12T05:44:00+00:00</published><updated>2024-03-12T05:44:00+00:00</updated><id>http://0.0.0.0:4000/blog/2024/03/12/moving-from-octopress-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2024/03/12/moving-from-octopress-to-jekyll/"><![CDATA[<h1 id="migrating-to-jekyll-from-octopress">Migrating to Jekyll from Octopress</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-03-21T03:31:49+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Paul’s Personal Blog</title><subtitle>Because sometimes I forget stuff and need to refer to documentation</subtitle><entry><title type="html">Blocking Users from creating Consumer Google accounts</title><link href="http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts/" rel="alternate" type="text/html" title="Blocking Users from creating Consumer Google accounts" /><published>2024-03-21T03:27:00+00:00</published><updated>2024-03-21T03:27:00+00:00</updated><id>http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts/"><![CDATA[<p>All of the good stuff is here:</p>
+
+<p>https://knowledge.workspace.google.com/kb/how-to-prevent-the-consumer-unmanaged-google-accounts-creation-in-the-domain-000006505</p>
+
+<p>In Summary:</p>
+
+<p>Block the email verification emails at the mailserver forcing users to only be able to use managed Google accounts that you create for them in Google Admin</p>]]></content><author><name></name></author><summary type="html"><![CDATA[All of the good stuff is here:]]></summary></entry><entry><title type="html">Jekyll Post Basics</title><link href="http://0.0.0.0:4000/blog/2024/03/21/jekyll-post-basics/" rel="alternate" type="text/html" title="Jekyll Post Basics" /><published>2024-03-21T03:27:00+00:00</published><updated>2024-03-21T03:27:00+00:00</updated><id>http://0.0.0.0:4000/blog/2024/03/21/jekyll-post-basics</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2024/03/21/jekyll-post-basics/"><![CDATA[<p>Execute the following command or use the template below:</p>
+
+<p>bundle exec jekyll post “Jekyll Post Basics”</p>
+
+<p>or</p>
+
+<hr />
+<p>layout: post
+title: Jekyll Post Basics
+date: 2024-03-21 03:27 +0000
+—</p>
+
+<p>to create a file named _posts/2024-03-21-jekyll-post-basics.md</p>
+
+<p>After creating the file test in your local environment using:</p>
+
+<p>bundle exec jekyll serve –host 0.0.0.0</p>
+
+<p>then when you are ready to publish add/commit/push your changes to your website</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Execute the following command or use the template below:]]></summary></entry><entry><title type="html">Moving from Octopress to Jekyll</title><link href="http://0.0.0.0:4000/blog/2024/03/12/moving-from-octopress-to-jekyll/" rel="alternate" type="text/html" title="Moving from Octopress to Jekyll" /><published>2024-03-12T05:44:00+00:00</published><updated>2024-03-12T05:44:00+00:00</updated><id>http://0.0.0.0:4000/blog/2024/03/12/moving-from-octopress-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2024/03/12/moving-from-octopress-to-jekyll/"><![CDATA[<h1 id="migrating-to-jekyll-from-octopress">Migrating to Jekyll from Octopress</h1>
 <p>This was a long and painful process but ultimately (hopefully) worthwhile</p>
 
 <h2 id="setting-up-a-new-jekyll-site">Setting up a new Jekyll Site</h2>
@@ -252,78 +276,4 @@ Cooked Noodles Or Rice, For Serving</p>
 
 
 <p><a href="https://dazdaztech.wordpress.com/2013/05/17/using-tcpdump-to-see-cdp-or-lldp-packets/">Info taken from</a></p>
-</div>]]></content><author><name></name></author><category term="documentation" /><category term="homelab" /><category term="raid" /><category term="work" /><summary type="html"><![CDATA[CDP]]></summary></entry><entry><title type="html">Common MegaCLI Commands</title><link href="http://0.0.0.0:4000/blog/2016/02/11/common-megacli-commands/" rel="alternate" type="text/html" title="Common MegaCLI Commands" /><published>2016-02-11T20:36:09+00:00</published><updated>2016-02-11T20:36:09+00:00</updated><id>http://0.0.0.0:4000/blog/2016/02/11/common-megacli-commands</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2016/02/11/common-megacli-commands/"><![CDATA[<div class='post'>
-<p>Ubuntu: megacli</p>
-
-<p>Centos: /opt/MegaRAID/MegaCli/MegaCli64</p>
-
-<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr>
-<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-</pre></td>
-<td class="code"><pre><code class="bash"><span class="line"><span class="c"># Get all adapter information</span>
-</span><span class="line">megacli -AdpAllInfo -aALL
-</span><span class="line">
-</span><span class="line"><span class="c">#Get all physical drives:</span>
-</span><span class="line">megacli -PDList -aALL
-</span><span class="line"><span class="c"># useful filter for above command:</span>
-</span><span class="line">megacli -PDList -aALL <span class="p">|</span> egrep -i <span class="s1">'(size|enclosure|slot|media)'</span>
-</span><span class="line">
-</span><span class="line"><span class="c"># Configure a new raid 0 with 1 drive using the default enclosure and the third drive</span>
-</span><span class="line">megacli -CfgLdAdd -r0 32:2 -a0
-</span><span class="line">
-</span><span class="line"><span class="c"># Configure a raid10 array with the third and fourth drives in one raid1 and the fifth and sixth drives in another raid1</span>
-</span><span class="line">megacli -CfgSpanAdd -r10 -Array0<span class="o">[</span>32:2,32:3<span class="o">]</span> -Array1<span class="o">[</span>32:4,32:5<span class="o">]</span> -a0
-</span></code></pre></td>
-</tr></table></div></figure>
-
-
-<p><a href="https://supportforums.cisco.com/document/62901/megacli-common-commands-and-procedures">Reference1</a></p>
-</div>]]></content><author><name></name></author><category term="documentation" /><category term="homelab" /><category term="raid" /><category term="work" /><summary type="html"><![CDATA[Ubuntu: megacli]]></summary></entry><entry><title type="html">Setting Up Octopress</title><link href="http://0.0.0.0:4000/blog/2016/02/11/setting-up-octopress/" rel="alternate" type="text/html" title="Setting Up Octopress" /><published>2016-02-11T19:38:47+00:00</published><updated>2016-02-11T19:38:47+00:00</updated><id>http://0.0.0.0:4000/blog/2016/02/11/setting-up-octopress</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2016/02/11/setting-up-octopress/"><![CDATA[<div class='post'>
-<h4>OS: Mac OSX 10.10.3 with Developer Tools installed</h4>
-
-<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr>
-<td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-</pre></td>
-<td class="code"><pre><code class="bash"><span class="line">sudo gem install bundler
-</span><span class="line"><span class="nb">cd</span> ~/git
-</span><span class="line">git clone git://github.com/imathis/octopress.git octopress
-</span><span class="line"><span class="nb">cd </span>octopress
-</span><span class="line">bundle install
-</span><span class="line">rake install
-</span><span class="line">
-</span><span class="line">rake new_post<span class="o">[</span><span class="s2">Setting Up octopress</span><span class="o">]</span>
-</span><span class="line"><span class="c">#edit the new source _post file here</span>
-</span><span class="line">rake generate
-</span><span class="line">rake deploy
-</span><span class="line"><span class="c"># ???</span>
-</span><span class="line"><span class="c"># Profit!</span>
-</span></code></pre></td>
-</tr></table></div></figure>
-
-
-
-</div>]]></content><author><name></name></author><category term="documentation" /><category term="github" /><category term="homelab" /><summary type="html"><![CDATA[OS: Mac OSX 10.10.3 with Developer Tools installed]]></summary></entry></feed>
+</div>]]></content><author><name></name></author><category term="documentation" /><category term="homelab" /><category term="raid" /><category term="work" /><summary type="html"><![CDATA[CDP]]></summary></entry></feed>
