@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-03-21T03:31:49+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Paul’s Personal Blog</title><subtitle>Because sometimes I forget stuff and need to refer to documentation</subtitle><entry><title type="html">Blocking Users from creating Consumer Google accounts</title><link href="http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts/" rel="alternate" type="text/html" title="Blocking Users from creating Consumer Google accounts" /><published>2024-03-21T03:27:00+00:00</published><updated>2024-03-21T03:27:00+00:00</updated><id>http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts/"><![CDATA[<p>All of the good stuff is here:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-03-21T03:35:49+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Paul’s Personal Blog</title><subtitle>Because sometimes I forget stuff and need to refer to documentation</subtitle><entry><title type="html">Blocking Users from creating Consumer Google accounts</title><link href="http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts/" rel="alternate" type="text/html" title="Blocking Users from creating Consumer Google accounts" /><published>2024-03-21T03:27:00+00:00</published><updated>2024-03-21T03:27:00+00:00</updated><id>http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2024/03/21/blocking-users-from-creating-consumer-google-accounts/"><![CDATA[<p>All of the good stuff is here:</p>
 
 <p>https://knowledge.workspace.google.com/kb/how-to-prevent-the-consumer-unmanaged-google-accounts-creation-in-the-domain-000006505</p>
 
@@ -9,13 +9,12 @@
 <p>bundle exec jekyll post “Jekyll Post Basics”</p>
 
 <p>or</p>
-
-<hr />
-<p>layout: post
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
 title: Jekyll Post Basics
 date: 2024-03-21 03:27 +0000
-—</p>
-
+---
+</code></pre></div></div>
 <p>to create a file named _posts/2024-03-21-jekyll-post-basics.md</p>
 
 <p>After creating the file test in your local environment using:</p>
