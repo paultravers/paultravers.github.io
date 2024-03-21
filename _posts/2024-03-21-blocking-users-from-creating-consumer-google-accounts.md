@@ -6,7 +6,7 @@ date: 2024-03-21 03:27 +0000
 
 All of the good stuff is here:
 
-https://knowledge.workspace.google.com/kb/how-to-prevent-the-consumer-unmanaged-google-accounts-creation-in-the-domain-000006505
+[https://knowledge.workspace.google.com/kb/how-to-prevent-the-consumer-unmanaged-google-accounts-creation-in-the-domain-000006505](https://knowledge.workspace.google.com/kb/how-to-prevent-the-consumer-unmanaged-google-accounts-creation-in-the-domain-000006505)
 
 In Summary:
 
